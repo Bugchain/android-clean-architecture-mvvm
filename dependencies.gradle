@@ -1,0 +1,100 @@
+ext {
+    // Android
+    androidBuildToolsVersion = '29.0.2'
+    androidMinSdkVersion = 21
+    androidTargetSdkVersion = 29
+    androidCompileSdkVersion = 29
+
+    kotlinVersion = '1.3.50'
+    coreKtxVersion = '1.1.0'
+    annotationVersion = '1.0.0'
+
+    // Design
+    appCompactVersion = '1.1.0'
+    recyclerViewVersion = '1.0.0'
+    materialDesignVersion = '1.0.0'
+    constraintLayoutVersion = '1.1.3'
+
+    javaxAnnotationVersion = '1.0'
+    javaxInjectVersion = '1'
+    rxKotlinVersion = '2.2.0'
+
+    gsonVersion = '2.8.5'
+    retrofitVersion = '2.4.0'
+    okHttpVersion = '3.9.1'
+
+    daggerVersion = '2.19'
+    kotlinVersion = '1.3.50'
+    roomVersion = '1.1.1'
+    roomRxJavaVersion = '2.0.0'
+
+    androidAnnotationVersion = '26.0.0'
+    rxAndroidVersion = '2.1.1'
+
+    glideVersion = '4.9.0'
+    glassFishAnnotationVersion = '3.1.1'
+    espressoVersion = '3.0.2'
+    runnerVersion = '0.5'
+    lottieVersion = '2.7.0'
+    pushDownAnimVersion = '1.1.1'
+    rxNetworkVersion = '3.0.1'
+
+    // Test Dependencies
+    junitVersion = '4.12'
+    extJunitVersion = '1.1.1'
+    espressoCoreVersion = '3.1.0'
+    espressoContrib = '3.1.0'
+    mockitoVersion = '2.22.0'
+    kotlinJunitVersion = '1.3.50'
+    testRules = '1.1.1'
+
+    archCompVersion = '1.1.1'
+    androidSupportRunnerVersion = '1.0.0'
+    androidSupportRulesVersion = '28.0.0'
+    robolectricVersion = '3.4.2'
+
+    nhaarmanMockitoKotlinVersion = '2.1.0'
+    mockitoAndroidVersion = '2.8.9'
+
+
+    // -------------------------------- App --------------------------------
+    appDependencies = [
+            kotlin             : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${kotlinVersion}",
+            coreKtx            : "androidx.core:core-ktx:${coreKtxVersion}",
+            appCompat          : "androidx.appcompat:appcompat:${appCompactVersion}",
+            constraintLayout   : "androidx.constraintlayout:constraintlayout:${constraintLayoutVersion}",
+            recyclerView       : "androidx.recyclerview:recyclerview:${recyclerViewVersion}",
+            materialDesign     : "com.google.android.material:material:${materialDesignVersion}",
+            annotationVersion  : "androidx.annotation:annotation:${annotationVersion}",
+            daggerCompiler     : "com.google.dagger:dagger-compiler:${daggerVersion}",
+            dagger             : "com.google.dagger:dagger:${daggerVersion}",
+            rxKotlin           : "io.reactivex.rxjava2:rxkotlin:${rxKotlinVersion}",
+            rxAndroid          : "io.reactivex.rxjava2:rxandroid:${rxAndroidVersion}",
+            glide              : "com.github.bumptech.glide:glide:${glideVersion}",
+            javaxAnnotation    : "javax.annotation:jsr250-api:${javaxAnnotationVersion}",
+            javaxInject        : "javax.inject:javax.inject:${javaxInjectVersion}",
+            daggerSupport      : "com.google.dagger:dagger-android-support:${daggerVersion}",
+            daggerProcessor    : "com.google.dagger:dagger-android-processor:${daggerVersion}",
+            glassfishAnnotation: "org.glassfish:javax.annotation:${glassFishAnnotationVersion}",
+            roomRxJava         : "androidx.room:room-rxjava2:${roomRxJavaVersion}",
+            lottie             : "com.airbnb.android:lottie:${lottieVersion}",
+            pushDownAnim       : "com.github.thekhaeng:pushdown-anim-click:${pushDownAnimVersion}",
+            reactivenetwork    : "com.github.pwittchen:reactivenetwork-rx2:${rxNetworkVersion}"
+
+    ]
+
+    // -------------------------------- App Test --------------------------------
+    appTestDependencies = [
+            junit                : "junit:junit:${junitVersion}",
+            kotlinJUnit          : "org.jetbrains.kotlin:kotlin-test-junit:${kotlinJunitVersion}",
+            mockitoAndroid       : "org.mockito:mockito-android:${mockitoVersion}",
+            espressoCore         : "androidx.test.espresso:espresso-core:${espressoCoreVersion}",
+            espressoContrib      : "androidx.test.espresso:espresso-contrib:${espressoContrib}",
+            extJunit             : "androidx.test.ext:junit:${extJunitVersion}",
+            testRules            : "androidx.test:rules:${testRules}",
+            robolectric          : "org.robolectric:robolectric:${robolectricVersion}",
+            nhaarmanMockitoKotlin: "com.nhaarman.mockitokotlin2:mockito-kotlin:${nhaarmanMockitoKotlinVersion}"
+    ]
+
+}
+

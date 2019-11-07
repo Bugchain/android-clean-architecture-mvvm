@@ -1,19 +1,21 @@
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-kapt'
 apply plugin: 'kotlin-android-extensions'
-
 android {
+
     compileSdkVersion rootProject.androidCompileSdkVersion
     buildToolsVersion rootProject.androidBuildToolsVersion
+
     defaultConfig {
-        applicationId "app.bugchain.mvvm"
         minSdkVersion rootProject.androidMinSdkVersion
         targetSdkVersion rootProject.androidTargetSdkVersion
         versionCode 1
         versionName "1.0"
+
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles 'consumer-rules.pro'
     }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -21,15 +23,13 @@ android {
         }
     }
 
-    dataBinding {
-        enabled = true
-    }
 }
 
 dependencies {
-
     def appDependencies = rootProject.ext.appDependencies
-    def appTestDependencies = rootProject.ext.appTestDependencies
+  //  def testDependencies = rootProject.ext.appTestDependencies
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
 
     implementation appDependencies.kotlin
     implementation appDependencies.coreKtx
@@ -40,23 +40,5 @@ dependencies {
     implementation appDependencies.recyclerView
     implementation appDependencies.materialDesign
     implementation appDependencies.annotationVersion
-
-    // Dagger
-    implementation appDependencies.dagger
-    implementation appDependencies.daggerSupport
-    kapt appDependencies.daggerCompiler
-    kapt appDependencies.daggerProcessor
-
-    //Rx
-    implementation appDependencies.rxKotlin
-    implementation appDependencies.rxAndroid
-
-    //Room
-    implementation appDependencies.roomRxJava
-
-    // Test
-    implementation appTestDependencies.junit
-    androidTestImplementation appTestDependencies.extJunit
-    androidTestImplementation appTestDependencies.espressoCore
 
 }
